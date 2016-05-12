@@ -56,13 +56,16 @@ function ErrorHandling( $provide ) {
     }
 }
 
-function AppCtrl( $rootScope, $state, appname, LoginService, toastr, $ocMedia ) {
+function AppCtrl( $templateCache, $rootScope, $state, appname, LoginService, toastr, $ocMedia ) {
     var vm = this;
     vm.name = appname;
     vm.title = appname;
     vm.showLeftNav = true;
     vm.$state = $state;
     vm.$ocMedia = $ocMedia;
+    
+    var templateURL = $templateCache.get('catalogSearch/templates/catalogSearchResults.tpl.html');
+    console.log(templateURL);
 
     vm.datepickerOptions = {
         showWeeks: false,
