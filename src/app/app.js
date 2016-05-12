@@ -64,7 +64,7 @@ function AppCtrl( $templateCache, $rootScope, $state, appname, LoginService, toa
     vm.$state = $state;
     vm.$ocMedia = $ocMedia;
     
-    var templateURL = $templateCache.get('./catalogSearch/templates/catalogSearchResults.tpl.html');
+    var templateURL = $templateCache.get('catalogSearch/templates/catalogSearchResults.tpl.html');
     console.log(templateURL);
 
     vm.datepickerOptions = {
